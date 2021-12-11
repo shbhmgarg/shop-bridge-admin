@@ -1,0 +1,38 @@
+.sidebar {
+  width: 345px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 1rem 1.2rem;
+}
+
+.sidebar-container {
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 1.2rem;
+}
+
+.brand {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.brand span {
+  font-size: 30px;
+  color: #393939;
+}
+
+.logoDark {
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+.logoLight {
+  font-weight: lighter;
+}

@@ -1,9 +1,19 @@
-
+import { Fragment } from "react";
+import './App.css';
+import Header from "./components/layout/header/Header";
+import Sidebar from "./components/sidebar/Sidebar";
 function App() {
   return (
-    <div className="App">
-      Shop Bridge Admin
-    </div>
+    <Fragment>
+      <input type="checkbox" id='menu-toggle' />
+      <Sidebar />
+      <div className="main-content">
+        <Header />
+        <main>
+          Hello Main Page
+        </main>
+      </div>
+    </Fragment>
   );
 }
 

@@ -1,0 +1,35 @@
+.sidebar-menu {
+  margin-bottom: 10px;
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: .4rem;
+}
+
+.sidebar-list-item {
+  padding: .3rem;
+  cursor: pointer;
+  display: block;
+  border-radius: 10px;
+  margin-bottom: .2rem;
+}
+
+.sidebar-list-item a {
+  color: var(--main-text);
+  display: flex;
+  align-items: center;
+}
+
+.sidebar-list-item.active, .sidebar-list-item:hover {
+  background-color: var(--main-accent);
+}
+
+.sidebar-list-item.active a, .sidebar-list-item:hover a {
+  color: var(--color-main);
+}
+
+.sidebar-icon {
+  margin-right: .8rem;
+  font-size: 1.2rem !important;
+}
