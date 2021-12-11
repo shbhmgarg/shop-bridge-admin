@@ -15,6 +15,24 @@
   border-radius: 20px;
   box-shadow: var(--shadow);
   padding: 1.2rem;
+  overflow-y: auto ;
+}
+
+.sidebar-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .brand {

@@ -8,24 +8,21 @@
 }
 
 .sidebar-list-item {
-  padding: .3rem;
   cursor: pointer;
   display: block;
-  border-radius: 10px;
   margin-bottom: .2rem;
 }
 
 .sidebar-list-item a {
+  padding: .3rem;
   color: var(--main-text);
   display: flex;
   align-items: center;
+  border-radius: 10px;
 }
 
-.sidebar-list-item.active, .sidebar-list-item:hover {
+.sidebar-list-item a.active, .sidebar-list-item a:hover {
   background-color: var(--main-accent);
-}
-
-.sidebar-list-item.active a, .sidebar-list-item:hover a {
   color: var(--color-main);
 }
 

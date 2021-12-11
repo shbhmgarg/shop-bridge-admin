@@ -30,3 +30,7 @@ body {
   width: calc(100vw - 345px);
   padding: 1rem 1.2rem;
 }
+
+main {
+  padding-top: 2rem;
+}

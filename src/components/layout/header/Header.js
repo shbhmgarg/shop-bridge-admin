@@ -1,7 +1,7 @@
 import React from "react";
 import './Header.css';
 import { Badge } from "@material-ui/core";
-import { Menu, NotificationImportant, Notifications } from "@material-ui/icons";
+import { Menu, Notifications } from "@material-ui/icons";
 
 const Header = () => {
   return (

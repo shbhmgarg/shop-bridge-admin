@@ -1,34 +1,35 @@
 import React from "react";
 import { LineStyle, Storefront, Settings, Person } from "@material-ui/icons";
 import "./SidebarMenu.css";
+import { NavLink } from "react-router-dom";
 
 const SidebarMenu = () => {
   return (
     <div className='sidebar-menu'>
       <ul className='sidebar-list'>
         <li className='sidebar-list-item'>
-          <a href='#!'>
-            <LineStyle className="sidebar-icon" />
+          <NavLink exact to='/' activeClassName="active">
+          <LineStyle className="sidebar-icon" />
             Home
-          </a>
+          </NavLink>
         </li>
         <li className='sidebar-list-item'>
-          <a href='#!'>
+          <NavLink exact to='/users' activeClassName="active">
             <Person className="sidebar-icon" />
             Users
-          </a>
-        </li>
-        <li className='sidebar-list-item active'>
-          <a href='#!'>
-            <Storefront className="sidebar-icon" />
-            <span>Products</span>
-          </a>
+          </NavLink>
         </li>
         <li className='sidebar-list-item'>
-          <a href='#!'>
+          <NavLink exact to='/products' activeClassName="active">
+            <Storefront className="sidebar-icon" />
+            <span>Products</span>
+          </NavLink>
+        </li>
+        <li className='sidebar-list-item'>
+          <NavLink exact to='/settings' activeClassName="active">
             <Settings className="sidebar-icon" />
             Settings
-          </a>
+          </NavLink>
         </li>
       </ul>
     </div>
