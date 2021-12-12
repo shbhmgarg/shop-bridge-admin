@@ -7,11 +7,19 @@ import Home from "./components/pages/home/Home";
 import Users from "./components/pages/users/Users";
 import ProductList from "./components/pages/products/ProductList";
 import Settings from "./components/pages/settings/Settings";
+import EditProduct from "./components/pages/edit-product/EditProduct";
+import CreateProduct from "./components/pages/new-product/CreateProduct";
+import { Close } from "@material-ui/icons";
 
 const App = () => {
   return (
     <Router>
       <input type='checkbox' id='menu-toggle' />
+      <div className="overlay">
+        <label htmlFor="menu-toggle">
+          {/* <Close /> */}
+        </label>
+      </div>
       <Sidebar />
       <div className='main-content'>
         <Header />
@@ -26,7 +34,13 @@ const App = () => {
             <Route exact path='/products'>
               <ProductList />
             </Route>
-            <Route exact path='/products'>
+            <Route exact path='/product/:productId'>
+              <EditProduct />
+            </Route>
+            <Route exact path='/add-product'>
+              <CreateProduct />
+            </Route>
+            <Route exact path='/settings'>
               <Settings />
             </Route>
           </Switch>

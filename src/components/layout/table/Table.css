@@ -2,16 +2,7 @@
   width: 90%;
   margin: 0 auto 40px;
 }
-.table-container__title {
-  background-color: #e10600;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
-.table-container__title h2 {
-  font-size: 24px;
-  font-weight: 300;
-}
+
 .table-container__table {
   width: 100%;
   border-collapse: collapse;
@@ -24,8 +15,9 @@
   border: 1px solid #ddd;
   padding: 10px;
   text-align: center;
+  border-radius: 10px;
 }
-.table-container__table tr:nth-child(even) {
+.table-container__table tr:hover {
   background-color: #f1f1f1;
 }
 @media (max-width: 991px) {
@@ -135,4 +127,25 @@
 .table-container img {
   width: 50px;
   border-radius: 50%;
+}
+
+.product-list-edit {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.product-list-delete {
+  color: red;
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

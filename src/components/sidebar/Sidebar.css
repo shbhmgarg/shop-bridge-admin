@@ -6,6 +6,7 @@
   left: 0;
   bottom: 0;
   padding: 1rem 1.2rem;
+  transition: left 300ms;
 }
 
 .sidebar-container {
@@ -53,4 +54,11 @@
 
 .logoLight {
   font-weight: lighter;
+}
+
+@media only screen and (max-width: 1224px) {
+  .sidebar {
+    left: -345px;
+    z-index: 30;
+  } 
 }
