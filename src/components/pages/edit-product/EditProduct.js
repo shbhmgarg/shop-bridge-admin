@@ -11,7 +11,7 @@ import {
 import PropTypes from "prop-types";
 import { useState } from "react";
 import { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 
 const EditProduct = ({
   product: { product },
@@ -25,6 +25,7 @@ const EditProduct = ({
   const [img, setImg] = useState("");
   const [price, setPrice] = useState("");
   const { productId } = useParams();
+  const history = useHistory();
 
   useEffect(() => {
     if (product === null || product.id.toString() !== productId ) {
@@ -55,6 +56,8 @@ const EditProduct = ({
 
       updateProducts(updatedProduct);
       clearProduct();
+      alert('Product Updated Successfully!');
+      history.push('/products');
     }
   };
 
@@ -67,7 +70,7 @@ const EditProduct = ({
       <div className='product-info'>
         <div className='product-info-item'>
           <span className='product-info-key'>Id:</span>
-          <span className='product-info-value'>{product.id}</span>
+          <span className='product-info-value'>{product !== null ? product.id : ''}</span>
         </div>
         <div className='product-info-item'>
           <span className='product-info-key'>Stock:</span>

@@ -6,7 +6,7 @@
       "img": "http://dummyimage.com/192x242.png/cc0000/ffffff",
       "stock": 100,
       "status": true,
-      "price": "$52.4"
+      "price": "$52"
     },
     {
       "id": 2,
@@ -95,6 +95,14 @@
       "status": true,
       "price": "$41.2",
       "id": 13
+    },
+    {
+      "name": "Testing new",
+      "img": "http://dummyimage.com/192x242.png/cc0000/ffffff",
+      "stock": 2,
+      "status": false,
+      "price": "1",
+      "id": 14
     }
   ]
 }

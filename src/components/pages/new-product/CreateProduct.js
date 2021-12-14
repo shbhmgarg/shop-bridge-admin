@@ -4,6 +4,7 @@ import './CreateProduct.css';
 import { connect } from "react-redux";
 import { addProduct } from "../../../actions/productAction";
 import PropTypes from 'prop-types';
+import { useHistory } from "react-router-dom";
 
 const CreateProduct = ({addProduct}) => {
   const [name, setName] = useState("");
@@ -12,6 +13,7 @@ const CreateProduct = ({addProduct}) => {
   // eslint-disable-next-line
   const [img, setImg] = useState("http://dummyimage.com/192x242.png/cc0000/ffffff");
   const [price, setPrice] = useState('');
+  const history = useHistory();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -26,6 +28,8 @@ const CreateProduct = ({addProduct}) => {
         price: price
       }
       addProduct(newProduct);
+      alert('Product added successfully!');
+      history.push('/products');
     }
   }
   
