@@ -9,45 +9,46 @@ import ProductList from "./components/pages/products/ProductList";
 import Settings from "./components/pages/settings/Settings";
 import EditProduct from "./components/pages/edit-product/EditProduct";
 import CreateProduct from "./components/pages/new-product/CreateProduct";
-import { Close } from "@material-ui/icons";
+import store from "./store";
+import { Provider } from "react-redux";
 
 const App = () => {
   return (
-    <Router>
-      <input type='checkbox' id='menu-toggle' />
-      <div className="overlay">
-        <label htmlFor="menu-toggle">
-          {/* <Close /> */}
-        </label>
-      </div>
-      <Sidebar />
-      <div className='main-content'>
-        <Header />
-        <main>
-          <Switch>
-            <Route exact path='/'>
-              <Home />
-            </Route>
-            <Route exact path='/users'>
-              <Users />
-            </Route>
-            <Route exact path='/products'>
-              <ProductList />
-            </Route>
-            <Route exact path='/product/:productId'>
-              <EditProduct />
-            </Route>
-            <Route exact path='/add-product'>
-              <CreateProduct />
-            </Route>
-            <Route exact path='/settings'>
-              <Settings />
-            </Route>
-          </Switch>
-        </main>
-      </div>
-    </Router>
+    <Provider store={store}>
+      <Router>
+        <input type='checkbox' id='menu-toggle' />
+        <div className='overlay'>
+          <label htmlFor='menu-toggle'></label>
+        </div>
+        <Sidebar />
+        <div className='main-content'>
+          <Header />
+          <main>
+            <Switch>
+              <Route exact path='/'>
+                <Home />
+              </Route>
+              <Route exact path='/users'>
+                <Users />
+              </Route>
+              <Route exact path='/products'>
+                <ProductList />
+              </Route>
+              <Route exact path='/product/:productId'>
+                <EditProduct />
+              </Route>
+              <Route exact path='/add-product'>
+                <CreateProduct />
+              </Route>
+              <Route exact path='/settings'>
+                <Settings />
+              </Route>
+            </Switch>
+          </main>
+        </div>
+      </Router>
+    </Provider>
   );
-}
+};
 
 export default App;

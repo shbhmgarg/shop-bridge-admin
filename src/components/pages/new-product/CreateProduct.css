@@ -15,8 +15,11 @@
   margin-bottom: 10px;
 }
 
-.addProductItem > input {
+.addProductItem > input.text {
   padding: 10px;
+  border: none;
+  padding: 5px;
+  border-bottom: 1px solid gray;
 }
 
 .addProductItem > select {
