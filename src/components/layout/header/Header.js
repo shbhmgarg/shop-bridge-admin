@@ -25,9 +25,13 @@ const Header = () => {
               <p>Add new product</p>{" "}
             </>
           ) : pathname.includes("/product/") ? (
-            <>
               <h1>Edit Product</h1>
-            </>
+          ) : pathname === ("/") ? (
+              <h1>Home</h1>
+          ) : pathname === ("/users") ? (
+              <h1>Users</h1>
+          ) : pathname === ("/settings") ? (
+              <h1>Settings</h1>
           ) : (
             ""
           )}
