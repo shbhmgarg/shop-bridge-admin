@@ -49,6 +49,7 @@
 
 .product-info-value {
   font-weight: 300;
+  text-transform: capitalize;
 }
 
 .edit-product-form {

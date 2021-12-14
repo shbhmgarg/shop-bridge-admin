@@ -62,24 +62,24 @@ const EditProduct = ({
     <div className='product'>
       <div className='product-title-container'>
         <img src={img} alt={name} className='product-info-img' />
-        <span className='product-name'>Apple Airpods</span>
+        <span className='product-name'>{name}</span>
       </div>
       <div className='product-info'>
         <div className='product-info-item'>
           <span className='product-info-key'>Id:</span>
-          <span className='product-info-value'>123</span>
+          <span className='product-info-value'>{product.id}</span>
         </div>
         <div className='product-info-item'>
-          <span className='product-info-key'>Sales:</span>
-          <span className='product-info-value'>214</span>
+          <span className='product-info-key'>Stock:</span>
+          <span className='product-info-value'>{stock}</span>
         </div>
         <div className='product-info-item'>
-          <span className='product-info-key'>Active:</span>
-          <span className='product-info-value'>Yes</span>
+          <span className='product-info-key'>Price:</span>
+          <span className='product-info-value'>{price}</span>
         </div>
         <div className='product-info-item'>
-          <span className='product-info-key'>In Stock:</span>
-          <span className='product-info-value'>Yes</span>
+          <span className='product-info-key'>Active</span>
+          <span className='product-info-value'>{status}</span>
         </div>
       </div>
       <div className='edit-product-form'>
